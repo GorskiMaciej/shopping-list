@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping List</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/d7f104decb.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <h1>Shopping list</h1>
-        <section>
-            <form action="">
-                <input type="text" class="addingItem"><button>+</button>
-            </form>
-            <div>
-                <div class="underline">.................................</div>
-                <ul class="toBuy"></ul>
-                <div class="underline">.................................</div>
-                <ul class="bought"></ul>
-            </div>
-            <div class="resetBtn"><i class="far fa-trash-alt"></i></div>
-
-        </section>
-    </div>
+    <section class="app">
+        <h1 class="app__h1">Shopping list</h1>
+        <form action="" class="app__form">
+            <input type="text" placeholder="add item to the list..." class="app__input addingItem"><button
+                class="app__btn">+</button>
+        </form>
+        <div class="app__div app__div--container">
+            <div class="app__div app__div--underline"></div>
+            <ul class="app__ul toBuy"></ul>
+            <div class="app__div--underline"></div>
+            <ul class="app__ul bought"></ul>
+        </div>
+        <div class="app__div resetBtn"><i class="app__i app__i--reset far fa-trash-alt fa-2x"></i></div>
+    </section>
 
 
     <script src="main.js"></script>

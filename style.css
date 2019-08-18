@@ -1,3 +1,95 @@
+html {
+    --darkbackgroundColor: #0f1f27;
+    --text: #D1DBBD;
+    --textBought: rgb(90, 92, 85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+}
+
 body {
-    background-color: #333;
+    padding: 5vw;
+    background-color: var(--darkbackgroundColor);
+
+}
+
+.app {
+    /* margin: 5vw; */
+    padding: 5vw;
+    min-height: calc(100vh - 20vw);
+    /* background-color: #D1DBBD; */
+}
+
+.app__h1 {
+    margin: 0 0 10vw 0;
+    text-align: center;
+}
+
+.app__form {
+    position: relative;
+    width: 100%;
+}
+
+.app__btn {
+    position: absolute;
+    box-sizing: border-box;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: #D1DBBD;
+    color: var(--darkbackgroundColor);
+    border: none;
+    border-radius: 2px;
+    line-height: 25px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.app__input {
+    box-sizing: border-box;
+    /* padding: 5px; */
+    width: calc(100% - 35px);
+    height: 25px;
+    background-color: var(--darkbackgroundColor);
+    border: 0 solid var(--darkbackgroundColor);
+}
+
+.app__li {
+    margin: 5px 0;
+    position: relative;
+    width: 100%;
+    list-style-type: none;
+}
+
+.app__ul {}
+
+.app__div {}
+
+.app__div--underline {
+    margin: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--text);
+
+}
+
+.app__i {}
+
+.app__i--move {
+    margin-right: 10px;
+}
+
+.app__i--close {
+    position: absolute;
+    right: 0;
+}
+
+.app__i--reset {
+    position: fixed;
+    bottom: 7vw;
+    right: 7vw;
 }
