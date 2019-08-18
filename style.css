@@ -13,15 +13,15 @@ html {
 
 body {
     padding: 5vw;
-    background-color: var(--darkbackgroundColor);
-
+    background-image: url("background.jpg");
+    background-size: 100%;
 }
 
 .app {
     /* margin: 5vw; */
     padding: 5vw;
     min-height: calc(100vh - 20vw);
-    /* background-color: #D1DBBD; */
+    background-color: #0f1f27f8;
 }
 
 .app__h1 {
