@@ -21,11 +21,20 @@ const removeItem = (e, buy, bought) => {
 
 const moveItem = (e, buy, bought) => {
     const choosenElementKey = e.target.parentNode.dataset.key;
+    const li = e.target.parentNode;
+    const i = e.target;
     const ulClass = e.target.parentNode.parentNode.className;
+    console.log(li);
     if (ulClass === "app__ul toBuy") {
+        li.classList.add("bought");
+        li.classList.remove("toBuy");
+        i.className = "app__i app__i--move far fa-check-square fa-lg";
         bought.push(buy[choosenElementKey]);
         buy.splice(choosenElementKey, 1);
     } else if (ulClass === "app__ul bought") {
+        i.className = "app__i app__i--move far fa-square fa-lg";
+        li.classList.add("toBuy");
+        li.classList.remove("bought");
         buy.push(bought[choosenElementKey]);
         bought.splice(choosenElementKey, 1);
     }
@@ -50,11 +59,11 @@ const addItem = (e) => {
     newItem.classList.add("toBuy");
     newItem.classList.add("app__li");
     newItem.innerHTML = `<i></i><span>${inputText}</span><i></i>`;
-    newItem.querySelector('i').className = "app__i app__i--move far fa-square";
+    newItem.querySelector('i').className = "app__i app__i--move far fa-square fa-lg";
     newItem.querySelector('i').addEventListener('click', (e) => {
         moveItem(e, ulToBuyArray, ulBoughtArray)
     });
-    newItem.querySelector('i:nth-of-type(2)').className = "app__i app__i--close fas fa-window-close";
+    newItem.querySelector('i:nth-of-type(2)').className = "app__i app__i--close fas fa-window-close fa-lg";
     newItem.querySelector('i:nth-of-type(2)').addEventListener('click', (e) => {
         removeItem(e, ulToBuyArray, ulBoughtArray)
     })
